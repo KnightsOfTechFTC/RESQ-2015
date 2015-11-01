@@ -902,6 +902,8 @@ public class PushBotHardware extends OpMode
 
     } // m_left_arm_power
 
+    void holder(double people_power){}
+
     //--------------------------------------------------------------------------
     //
     // a_hand_position
