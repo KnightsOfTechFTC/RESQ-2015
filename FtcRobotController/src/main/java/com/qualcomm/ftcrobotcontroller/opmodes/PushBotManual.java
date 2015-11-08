@@ -88,9 +88,10 @@ public class PushBotManual extends PushBotTelemetry
         // Manage the holder servo
 
         if (gamepad2.dpad_up) {
-            people_power = 0.5;
-        } else if (gamepad2.dpad_down) {
-            people_power = -0.5;
+            people_power = people_power+0.10;
+        }
+        else if (gamepad2.dpad_down) {
+            people_power = people_power-0.10;
         }
 
 

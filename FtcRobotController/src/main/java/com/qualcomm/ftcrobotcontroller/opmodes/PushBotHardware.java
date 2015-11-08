@@ -25,7 +25,7 @@ import com.qualcomm.robotcore.util.Range;
 public class PushBotHardware extends OpMode
 
 {
-    public double people_power;
+    double people_power = 0.5;
     //--------------------------------------------------------------------------
     //
     // PushBotHardware
@@ -917,7 +917,7 @@ public class PushBotHardware extends OpMode
 
     } // m_left_arm_power
 
-    void holder(double people_power){}
+
 
     //--------------------------------------------------------------------------
     //
