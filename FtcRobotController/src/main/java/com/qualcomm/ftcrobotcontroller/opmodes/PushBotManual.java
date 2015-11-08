@@ -50,9 +50,6 @@ public class PushBotManual extends PushBotTelemetry
      *
      * The system calls this member repeatedly while the OpMode is running.
      */
-    double people_power;
-    int bb_power1;
-    int bb_power2;
 
     @Override public void loop ()
 
@@ -95,18 +92,8 @@ public class PushBotManual extends PushBotTelemetry
         } else if (gamepad2.dpad_down) {
             people_power = -0.5;
         }
-        holder (people_power);
-        if (gamepad2.x) {
-            bb_power1 = 1;
-        } else if (gamepad2.y) {
-            bb_power1 = -1;
-        } else if (gamepad2.a) {
-            bb_power2 = 1;
-        } else if (gamepad2.b) {
-            bb_power2 = -1;
-        }
-        left_hand (bb_power1);
-        right_hand (bb_power2);
+
+
         //----------------------------------------------------------------------
         //
         // Servo Motors
@@ -138,12 +125,8 @@ public class PushBotManual extends PushBotTelemetry
 
     } // loop
 
-    private void right_hand(int bb_power2) {
-          }
 
-    private void left_hand(int bb_power1) {
-           }
 
 }
 
- // PushBotManual
+  // PushBotManual

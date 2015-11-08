@@ -25,6 +25,7 @@ import com.qualcomm.robotcore.util.Range;
 public class PushBotHardware extends OpMode
 
 {
+    public double people_power;
     //--------------------------------------------------------------------------
     //
     // PushBotHardware
@@ -138,6 +139,20 @@ public class PushBotHardware extends OpMode
             DbgLog.msg (p_exeception.getLocalizedMessage ());
 
             v_servo_left_hand = null;
+        }
+
+        try
+        {
+            v_servo_holder = hardwareMap.servo.get ("holder");
+
+            v_servo_holder.setPosition (people_power);
+        }
+        catch (Exception p_exeception)
+        {
+            m_warning_message ("holder");
+            DbgLog.msg (p_exeception.getLocalizedMessage ());
+
+            v_servo_holder = null;
         }
 
         try
@@ -1044,5 +1059,12 @@ public class PushBotHardware extends OpMode
      * Manage the aspects of the right hand servo.
      */
     private Servo v_servo_right_hand;
+//______________________________________________________________________________
+
+    private  Servo v_servo_holder;
+
+    private  Servo v_servo_right_arm;
+
+    private  Servo v_servo_left_arm;
 
 } // PushBotHardware
