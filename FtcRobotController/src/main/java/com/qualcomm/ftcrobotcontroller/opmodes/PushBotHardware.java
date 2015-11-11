@@ -223,6 +223,58 @@ public class PushBotHardware extends OpMode
 
     //--------------------------------------------------------------------------
     //
+    // a_hand_position
+    //
+    /**
+     * Access the hand position.
+     */
+    double a_holder_position ()
+    {
+        double l_return = 0.0;
+
+        if (v_servo_holder != null)
+        {
+            l_return = v_servo_holder.getPosition ();
+        }
+
+        return l_return;
+
+    } // a_hand_position
+
+    //--------------------------------------------------------------------------
+    //
+    // m_hand_position
+    //
+    /**
+     * Mutate the hand position.
+     */
+    void m_holder_position (double p_position)
+    {
+        //
+        // Ensure the specific value is legal.
+        //
+        double l_position = Range.clip
+                ( p_position
+
+                          , Servo.MIN_POSITION
+                         , Servo.MAX_POSITION
+                );
+
+        //
+        // Set the value.  The right hand value must be opposite of the left
+        // value.
+        //
+        if (v_servo_holder != null)
+        {
+            v_servo_holder.setPosition (l_position);
+        }
+
+        }
+
+    } // m_hand_position
+
+    //--------------------------------------------------------------------------
+    //
     // start
     //
     /**

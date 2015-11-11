@@ -88,10 +88,10 @@ public class PushBotManual extends PushBotTelemetry
         // Manage the holder servo
 
         if (gamepad2.dpad_up) {
-            people_power = people_power+0.10;
+            m_holder_position(a_holder_position()+.01);
         }
         else if (gamepad2.dpad_down) {
-            people_power = people_power-0.10;
+            m_holder_position(a_holder_position()-.01);
         }
 
 
@@ -111,11 +111,11 @@ public class PushBotManual extends PushBotTelemetry
         //
         if (gamepad2.x)
         {
-           m_hand_position (a_hand_position () + 0.05);
+           m_hand_position(a_hand_position() + 0.05);
        }
         else if (gamepad2.b)
         {
-           m_hand_position (a_hand_position () - 0.05);
+           m_hand_position(a_hand_position() - 0.05);
         }
 
         //
