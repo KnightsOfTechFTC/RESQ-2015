@@ -269,7 +269,7 @@ public class PushBotHardware extends OpMode
             v_servo_holder.setPosition (l_position);
         }
 
-        }
+        
 
     } // m_hand_position
 
