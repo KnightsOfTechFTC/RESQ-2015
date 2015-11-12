@@ -112,7 +112,7 @@ public class PushBotAuto extends PushBotTelemetry
             //
             // Start the drive wheel motors at full power.
             //
-            set_drive_power (1.0f, 1.0f);
+            set_drive_power (.49f, .45f);
 
             //
             // Have the motor shafts turned the required amount?
@@ -120,7 +120,7 @@ public class PushBotAuto extends PushBotTelemetry
             // If they haven't, then the op-mode remains in this state (i.e this
             // block will be executed the next time this method is called).
             //
-            if (have_drive_encoders_reached (2880, 2880))
+            if (have_drive_encoders_reached (10084, 10084))
             {
                 //
                 // Reset the encoders to ensure they are at a known good value.
@@ -151,7 +151,7 @@ public class PushBotAuto extends PushBotTelemetry
         //
         // Turn left until the encoders exceed the specified values.
         //
-        case 3:
+       /* case 3:
             run_using_encoders ();
             set_drive_power (-1.0f, 1.0f);
             if (have_drive_encoders_reached (2880, 2880))
@@ -192,7 +192,7 @@ public class PushBotAuto extends PushBotTelemetry
                 v_state++;
             }
             break;
-        //
+    */  //
         // Perform no action - stay in this case until the OpMode is stopped.
         // This method will still be called regardless of the state machine.
         //

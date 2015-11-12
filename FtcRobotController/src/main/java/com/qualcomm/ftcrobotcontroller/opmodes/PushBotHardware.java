@@ -25,7 +25,8 @@ import com.qualcomm.robotcore.util.Range;
 public class PushBotHardware extends OpMode
 
 {
-    double people_power = 0.5;
+
+
     //--------------------------------------------------------------------------
     //
     // PushBotHardware
@@ -127,6 +128,7 @@ public class PushBotHardware extends OpMode
         // hand should be halfway opened/closed.
         //
         double l_hand_position = 0.5;
+        double l_holder_position = 0.1;
 
         try
         {
@@ -145,7 +147,7 @@ public class PushBotHardware extends OpMode
         {
             v_servo_holder = hardwareMap.servo.get ("holder");
 
-            v_servo_holder.setPosition (people_power);
+            v_servo_holder.setPosition (l_holder_position);
         }
         catch (Exception p_exeception)
         {
@@ -223,10 +225,10 @@ public class PushBotHardware extends OpMode
 
     //--------------------------------------------------------------------------
     //
-    // a_hand_position
+    // a_holder_position
     //
     /**
-     * Access the hand position.
+     * Access the holder servo's position.
      */
     double a_holder_position ()
     {
@@ -239,14 +241,14 @@ public class PushBotHardware extends OpMode
 
         return l_return;
 
-    } // a_hand_position
+    } // a_holder_position
 
     //--------------------------------------------------------------------------
     //
-    // m_hand_position
+    // m_holder_position
     //
     /**
-     * Mutate the hand position.
+     * Mutate the holder servo's position.
      */
     void m_holder_position (double p_position)
     {
@@ -260,18 +262,15 @@ public class PushBotHardware extends OpMode
                          , Servo.MAX_POSITION
                 );
 
-        //
-        // Set the value.  The right hand value must be opposite of the left
-        // value.
-        //
+
         if (v_servo_holder != null)
         {
             v_servo_holder.setPosition (l_position);
         }
 
-        
 
-    } // m_hand_position
+
+    } // m_holder_position
 
     //--------------------------------------------------------------------------
     //
@@ -1008,7 +1007,7 @@ public class PushBotHardware extends OpMode
         //
         double l_position = Range.clip
             ( p_position
-                    ,0.5
+                    ,0.45
                     ,0.95
           //  , Servo.MIN_POSITION
           //  , Servo.MAX_POSITION
