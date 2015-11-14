@@ -128,7 +128,7 @@ public class PushBotHardware extends OpMode
         // hand should be halfway opened/closed.
         //
         double l_hand_position = 0.5;
-        double l_holder_position = 0.1;
+        double l_holder_position = 0;
 
         try
         {
@@ -350,15 +350,14 @@ public class PushBotHardware extends OpMode
         //
         float l_power = Range.clip (p_power, -1, 1);
 
-        //float[] l_array =
-        //    { 0.00f, 0.05f, 0.09f, 0.10f, 0.12f
-        //    , 0.15f, 0.18f, 0.24f, 0.30f, 0.36f
-        //    , 0.43f, 0.50f, 0.60f, 0.72f, 0.85f
-        //    , 1.00f, 1.00f
-        //    };
-       // this was the original.
         float[] l_array =
-                { 0.00f, 0.04f, 0.07f, 0.8f, 0.10f, 0.12f, 0.135f, 0.18f, 0.225f, 0.27f, 0.323f, 0.375f, 0.45f, 0.54f, .638f, .75f, .75f};
+            { 0.00f, 0.05f, 0.09f, 0.10f, 0.12f
+            , 0.15f, 0.18f, 0.24f, 0.30f, 0.36f
+            , 0.43f, 0.50f, 0.60f, 0.72f, 0.85f
+            , 1.00f, 1.00f
+            };
+        // float[] l_array =
+        //        { 0.00f, 0.04f, 0.07f, 0.8f, 0.10f, 0.12f, 0.135f, 0.18f, 0.225f, 0.27f, 0.323f, 0.375f, 0.45f, 0.54f, .638f, .75f, .75f};
 
         //
         // Get the corresponding index for the specified argument/parameter.

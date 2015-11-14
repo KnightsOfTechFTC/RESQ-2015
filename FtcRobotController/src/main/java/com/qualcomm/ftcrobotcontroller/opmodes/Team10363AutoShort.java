@@ -12,7 +12,7 @@ package com.qualcomm.ftcrobotcontroller.opmodes;
  * @author SSI Robotics
  * @version 2015-08-01-06-01
  */
-public class PushBotAuto extends PushBotTelemetry
+public class Team10363AutoShort extends PushBotTelemetry
 
 {
     //--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ public class PushBotAuto extends PushBotTelemetry
      *
      * The system calls this member when the class is instantiated.
      */
-    public PushBotAuto ()
+    public Team10363AutoShort()
 
     {
         //
@@ -120,7 +120,7 @@ public class PushBotAuto extends PushBotTelemetry
             // If they haven't, then the op-mode remains in this state (i.e this
             // block will be executed the next time this method is called).
             //
-            if (have_drive_encoders_reached (10084, 10084))
+            if (have_drive_encoders_reached (7200, 7200))
             {
                 //
                 // Reset the encoders to ensure they are at a known good value.
