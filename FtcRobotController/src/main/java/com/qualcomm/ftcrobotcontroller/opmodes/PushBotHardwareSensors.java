@@ -6,6 +6,7 @@ import com.qualcomm.robotcore.hardware.TouchSensor;
 import com.qualcomm.robotcore.hardware.OpticalDistanceSensor;
 import com.qualcomm.robotcore.util.Range;
 
+
 //------------------------------------------------------------------------------
 //
 // PushBotHardwareSensors
@@ -93,7 +94,6 @@ public class PushBotHardwareSensors extends PushBotTelemetry
 
             v_sensor_ir = null;
         }
-
         try
         {
             v_sensor_ods = hardwareMap.opticalDistanceSensor.get ("sensor_ods");
